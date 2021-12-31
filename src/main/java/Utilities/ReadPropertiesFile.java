@@ -15,8 +15,7 @@ public class ReadPropertiesFile {
      */
     public void readProperties() throws IOException {
 
-        FileInputStream fis = new FileInputStream("E:\\Java Projects\\Student Management\\src\\main\\" +
-                "resources\\Connection.properties");
+        FileInputStream fis = new FileInputStream("E:\\Java Projects\\ExpenseTracker\\src\\main\\java\\Resources\\DBConnection.properties");
 
         Properties prop = new Properties();
 

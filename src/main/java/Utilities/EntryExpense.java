@@ -14,7 +14,7 @@ public class EntryExpense {
 
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Enter Date of transaction in 'DD/MM/YYYY' format: ");
+        System.out.println("Enter Date of transaction in 'YYYY-MM-DD' format: ");
         date = bf.readLine();
 
         System.out.println("Enter Expense Name: ");
@@ -25,6 +25,9 @@ public class EntryExpense {
 
         ExpenseDAO ed = new ExpenseDAO(date, expenseName, amount);
 
+        ExpenseConnection.insertExpense(ed);
+
+        System.out.println(ed.toString());
     }
 
 
