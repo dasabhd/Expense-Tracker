@@ -4,6 +4,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * The type Read properties file.
+ */
 public class ReadPropertiesFile {
 
     private String url;
@@ -12,6 +15,8 @@ public class ReadPropertiesFile {
 
     /**
      * Read properties.
+     *
+     * @throws IOException the io exception
      */
     public void readProperties() throws IOException {
 

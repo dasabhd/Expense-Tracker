@@ -4,8 +4,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * The type Entry expense.
+ */
 public class EntryExpense {
 
+    /**
+     * Entry expense.
+     *
+     * @throws IOException the io exception
+     */
     public void entryExpense() throws IOException {
 
         String date;

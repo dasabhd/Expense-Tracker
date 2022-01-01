@@ -4,11 +4,23 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * The type Cp.
+ */
 public class CP {
 
-     Connection con;
+    /**
+     * The Con.
+     */
+    Connection con;
 
-     public Connection createConnection() throws SQLException {
+    /**
+     * Create connection connection.
+     *
+     * @return the connection
+     * @throws SQLException the sql exception
+     */
+    public Connection createConnection() throws SQLException {
 
          //load the driver
          try{
