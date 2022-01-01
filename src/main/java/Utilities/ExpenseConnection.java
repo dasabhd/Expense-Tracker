@@ -1,5 +1,6 @@
 package Utilities;
 
+import java.io.IOException;
 import java.sql.*;
 
 /**
@@ -28,7 +29,7 @@ public class ExpenseConnection {
 
             ps.executeUpdate();
 
-        }catch(SQLException e){
+        }catch(SQLException | IOException e){
 
              e.printStackTrace();
 
@@ -75,6 +76,8 @@ public class ExpenseConnection {
 
             e.printStackTrace();
 
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }

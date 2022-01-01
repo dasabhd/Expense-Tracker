@@ -1,5 +1,6 @@
 package Utilities;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -20,7 +21,7 @@ public class CP {
      * @return the connection
      * @throws SQLException the sql exception
      */
-    public Connection createConnection() throws SQLException {
+    public Connection createConnection() throws SQLException, IOException {
 
          //load the driver
          try{
@@ -31,9 +32,12 @@ public class CP {
          }
 
          //create connection
-         String url = "jdbc:mysql://localhost:3306/expense_tracker";
-         String user = "root";
-         String password = "root";
+        ReadPropertiesFile rp = new ReadPropertiesFile();
+         rp.readProperties();
+
+         String url = rp.getUrl();
+         String user = rp.getUser();
+         String password = rp.getPassword();
 
          con = DriverManager.getConnection(url,user,password);
 
